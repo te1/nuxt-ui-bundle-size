@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
       rollupOptions: {
         output: {
-          assetFileNames: `_nuxt/[name].[ext]`,
+          assetFileNames: "_nuxt/[name].[ext]",
         },
       },
     },

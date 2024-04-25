@@ -11,6 +11,12 @@ export default defineNuxtConfig({
   vite: {
     build: {
       cssCodeSplit: false,
+
+      rollupOptions: {
+        output: {
+          assetFileNames: `_nuxt/[name].[ext]`,
+        },
+      },
     },
   },
 });

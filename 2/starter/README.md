@@ -1,12 +1,9 @@
 # Nuxt UI Minimal Starter
 
-Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI docs](https://ui.nuxt.com) to learn more.
-
 ## Info
 
 - generated with `npx nuxi init -t ui`
 - disabled [`features.inlineStyles`](https://nuxt.com/docs/guide/going-further/features#inlinestyles) and [`vite.build.cssCodeSplit`](https://vitejs.dev/config/build-options#build-csscodesplit) to have all CSS in one file
-- run `pnpm generate` to generate `.output/public/_nuxt/style.css`
 
 ## Setup
 
@@ -26,16 +23,8 @@ pnpm run dev
 
 ## Production
 
-Build the application for production:
+Generate CSS at [`.output/public/_nuxt/style.css`](.output/public/_nuxt/style.css):
 
 ```bash
-pnpm run build
+pnpm run generate
 ```
-
-Locally preview production build:
-
-```bash
-pnpm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

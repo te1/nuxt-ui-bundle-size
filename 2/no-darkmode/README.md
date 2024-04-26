@@ -1,13 +1,31 @@
 # Nuxt UI Minimal Starter
 
-Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI docs](https://ui.nuxt.com) to learn more.
-
 ## Info
 
 - generated with `npx nuxi init -t ui`
 - disabled [`features.inlineStyles`](https://nuxt.com/docs/guide/going-further/features#inlinestyles) and [`vite.build.cssCodeSplit`](https://vitejs.dev/config/build-options#build-csscodesplit) to have all CSS in one file
 - [disabled dark mode](https://github.com/nuxt/ui/issues/877#issuecomment-1965839333)
-- run `pnpm generate` to generate `.output/public/_nuxt/style.css`
+- note: this has some gotchas and I would not recommend it (it breaks parts of Nuxt UI if you still have `class="dark"` applied)
+- see [tailwind.config.ts](tailwind.config.ts) and [nuxt.config.ts](nuxt.config.ts)
+
+```ts
+import type { Config } from "tailwindcss";
+
+export default <Partial<Config>>{
+  // disable dark mode
+  // https://github.com/nuxt/ui/issues/877#issuecomment-1965839333
+  darkMode: [],
+};
+```
+
+```ts
+export default defineNuxtConfig({
+  // default to light mode
+  colorMode: {
+    preference: "light",
+  },
+});
+```
 
 ## Setup
 
@@ -27,16 +45,8 @@ pnpm run dev
 
 ## Production
 
-Build the application for production:
+Generate CSS at [`.output/public/_nuxt/style.css`](.output/public/_nuxt/style.css):
 
 ```bash
-pnpm run build
+pnpm run generate
 ```
-
-Locally preview production build:
-
-```bash
-pnpm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

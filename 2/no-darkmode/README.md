@@ -6,6 +6,7 @@ Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nux
 
 - generated with `npx nuxi init -t ui`
 - disabled [`features.inlineStyles`](https://nuxt.com/docs/guide/going-further/features#inlinestyles) and [`vite.build.cssCodeSplit`](https://vitejs.dev/config/build-options#build-csscodesplit) to have all CSS in one file
+- [disabled dark mode](https://github.com/nuxt/ui/issues/877#issuecomment-1965839333)
 - run `pnpm generate` to generate `.output/public/_nuxt/style.css`
 
 ## Setup

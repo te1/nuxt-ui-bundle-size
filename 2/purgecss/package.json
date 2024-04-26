@@ -11,6 +11,10 @@
   },
   "devDependencies": {
     "@nuxt/ui": "^2.15.2",
-    "nuxt": "^3.11.2"
+    "nuxt": "^3.11.2",
+    "nuxt-purgecss": "^2.0.0"
+  },
+  "resolutions": {
+    "consola": "^3.0.0"
   }
 }

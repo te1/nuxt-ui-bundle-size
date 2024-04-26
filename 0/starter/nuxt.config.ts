@@ -2,7 +2,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
+  modules: [
+    "nuxt-icon",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/color-mode",
+  ],
 
   features: {
     inlineStyles: false,
@@ -18,5 +22,10 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+
+  tailwindcss: {
+    exposeConfig: true,
+    config: { darkMode: 'class' },
   },
 });

@@ -39,8 +39,10 @@ export default defineNuxtModule({
     configKey: "ui",
   },
   defaults: {
-    safelistColors: ["primary"],
-    disableGlobalStyles: false,
+    prefix: 'U',
+    icons: ['heroicons'],
+    safelistColors: ['primary'],
+    disableGlobalStyles: false
   },
   async setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url);

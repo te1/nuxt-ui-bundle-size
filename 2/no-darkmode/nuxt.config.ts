@@ -4,6 +4,7 @@ export default defineNuxtConfig({
 
   modules: ["@nuxt/ui"],
 
+  // default to light mode
   colorMode: {
     preference: "light",
   },

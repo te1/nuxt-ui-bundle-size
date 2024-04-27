@@ -18,48 +18,48 @@ const colorsToExclude = [
 ]
 
 const safelistByComponent: Record<string, (colors: string) => TWConfig['safelist']> = {
-  alert: (colorsAsRegex) => [{
-    pattern: new RegExp(`bg-(${colorsAsRegex})-50`)
-  }, {
-    pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-500`)
-  }],
-  avatar: (colorsAsRegex) => [{
-    pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
-  }],
-  badge: (colorsAsRegex) => [{
-    pattern: new RegExp(`bg-(${colorsAsRegex})-50`)
-  }, {
-    pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-500`)
-  }],
+  // alert: (colorsAsRegex) => [{
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-50`)
+  // }, {
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-500`)
+  // }],
+  // avatar: (colorsAsRegex) => [{
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
+  // }],
+  // badge: (colorsAsRegex) => [{
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-50`)
+  // }, {
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-500`)
+  // }],
   button: (colorsAsRegex) => [{
     pattern: new RegExp(`bg-(${colorsAsRegex})-50`),
     variants: ['hover', 'disabled']
@@ -115,98 +115,98 @@ const safelistByComponent: Record<string, (colors: string) => TWConfig['safelist
     pattern: new RegExp(`ring-(${colorsAsRegex})-500`),
     variants: ['focus']
   }],
-  radio: (colorsAsRegex) => [{
-    pattern: new RegExp(`text-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
-    variants: ['dark:focus-visible']
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-500`),
-    variants: ['focus-visible']
-  }],
-  checkbox: (colorsAsRegex) => [{
-    pattern: new RegExp(`text-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
-    variants: ['dark:focus-visible']
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-500`),
-    variants: ['focus-visible']
-  }],
-  toggle: (colorsAsRegex) => [{
-    pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
-    variants: ['dark:focus-visible']
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-500`),
-    variants: ['focus-visible']
-  }],
-  range: (colorsAsRegex) => [{
-    pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
-    variants: ['dark:focus-visible']
-  }, {
-    pattern: new RegExp(`ring-(${colorsAsRegex})-500`),
-    variants: ['focus-visible']
-  }],
-  progress: (colorsAsRegex) => [{
-    pattern: new RegExp(`text-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-500`)
-  }],
-  meter: (colorsAsRegex) => [{
-    pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-500`)
-  }],
-  notification: (colorsAsRegex) => [{
-    pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`text-(${colorsAsRegex})-500`)
-  }],
-  chip: (colorsAsRegex) => [{
-    pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
-    variants: ['dark']
-  }, {
-    pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
-  }]
+  // radio: (colorsAsRegex) => [{
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
+  //   variants: ['dark:focus-visible']
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-500`),
+  //   variants: ['focus-visible']
+  // }],
+  // checkbox: (colorsAsRegex) => [{
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
+  //   variants: ['dark:focus-visible']
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-500`),
+  //   variants: ['focus-visible']
+  // }],
+  // toggle: (colorsAsRegex) => [{
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
+  //   variants: ['dark:focus-visible']
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-500`),
+  //   variants: ['focus-visible']
+  // }],
+  // range: (colorsAsRegex) => [{
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-400`),
+  //   variants: ['dark:focus-visible']
+  // }, {
+  //   pattern: new RegExp(`ring-(${colorsAsRegex})-500`),
+  //   variants: ['focus-visible']
+  // }],
+  // progress: (colorsAsRegex) => [{
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-500`)
+  // }],
+  // meter: (colorsAsRegex) => [{
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-500`)
+  // }],
+  // notification: (colorsAsRegex) => [{
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`text-(${colorsAsRegex})-500`)
+  // }],
+  // chip: (colorsAsRegex) => [{
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-400`),
+  //   variants: ['dark']
+  // }, {
+  //   pattern: new RegExp(`bg-(${colorsAsRegex})-500`)
+  // }]
 }
 
 const safelistComponentAliasesMap = {
@@ -277,13 +277,13 @@ export const generateSafelist = (colors: string[], globalColors: string[]) => {
   const baseSafelist = Object.keys(safelistByComponent).flatMap(component => safelistByComponent[component](colorsAsRegex(colors)))
 
   // Ensure `red` color is safelisted for form elements so that `error` prop of `UFormGroup` always works
-  const formsSafelist = ['input', 'radio', 'checkbox', 'toggle', 'range'].flatMap(component => safelistByComponent[component](colorsAsRegex(['red'])))
+  const formsSafelist = ['input'/*, 'radio', 'checkbox', 'toggle', 'range' */].flatMap(component => safelistByComponent[component](colorsAsRegex(['red'])))
 
   return [
     ...baseSafelist,
     ...formsSafelist,
     // Ensure all global colors are safelisted for the Notification (toast.add)
-    ...safelistByComponent['notification'](colorsAsRegex(globalColors)),
+    // ...safelistByComponent['notification'](colorsAsRegex(globalColors)),
     // Gray safelist for Avatar & Notification
     'bg-gray-500',
     'dark:bg-gray-400',

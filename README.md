@@ -31,7 +31,18 @@ As reported by `pnpm generate`:
   - https://tailwindcss.com/docs/content-configuration#safelisting-classes
   - https://purgecss.com/safelisting.html#patterns
 
+## Conclusion
+
+- combine a whitelist of used colors with a blacklist of unused components
+- this is relatively straightforward to do and has manageable risks
+- see [example project](2/whitelist-colors-blacklist-components/) for details
+
 ## Related Issues
 
 - https://github.com/nuxt/ui/issues/877
 - https://github.com/nuxt/ui/issues/889
+
+## The Future
+
+- [Tailwind v4 Vite plugin](https://tailwindcss.com/blog/tailwindcss-v4-alpha#zero-configuration-content-detection) should make blacklisting unused components obsolete
+- [Nuxt UI v3](https://github.com/nuxt/ui/issues/1289) should improve safelisting of colors

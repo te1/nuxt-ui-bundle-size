@@ -1,4 +1,4 @@
-# Nuxt UI Minimal Starter
+# Nuxt UI Minimal Starter - Whitelist + Blacklist
 
 ## Info
 

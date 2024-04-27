@@ -1,4 +1,4 @@
-# nuxt-ui-bundle-size
+# Nuxt UI CSS Bundle Size Comparison
 
 Compare CSS bundle sizes for [Nuxt UI](https://ui.nuxt.com) with different strategies to minimize size.
 

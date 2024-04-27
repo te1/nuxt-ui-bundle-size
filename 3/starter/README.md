@@ -1,4 +1,4 @@
-# Nuxt UI Minimal Starter
+# Nuxt UI Minimal Starter - Nuxt UI v3 + Tailwind v4 alpha 
 
 ## Info
 

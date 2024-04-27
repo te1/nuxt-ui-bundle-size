@@ -1,4 +1,4 @@
-# Nuxt UI Minimal Starter
+# Nuxt UI Minimal Starter - Disable Dark Mode
 
 ## Info
 

@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Minimal Starter - "Manual Tree Shaking"
 
 ## Info
 

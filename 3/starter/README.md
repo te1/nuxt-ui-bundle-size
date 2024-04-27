@@ -12,7 +12,7 @@
 
 ## Results
 
-As reported by `pnpm generate`:
+CSS bundle size as reported by `pnpm generate`:
 
 | name                                        |      size |              saved |     gzip |             saved |
 | :------------------------------------------ | --------: | -----------------: | -------: | ----------------: |

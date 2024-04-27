@@ -4,7 +4,7 @@ Compare CSS bundle sizes for [Nuxt UI](https://ui.nuxt.com) with different strat
 
 ## Results
 
-As reported by `pnpm generate`:
+CSS bundle size as reported by `pnpm generate`:
 
 | name                                                                |      size |              saved |     gzip |             saved |
 | :------------------------------------------------------------------ | --------: | -----------------: | -------: | ----------------: |
@@ -19,6 +19,12 @@ As reported by `pnpm generate`:
 ### Notes
 
 - all tests use [nuxt@3.11.2](https://www.npmjs.com/package/nuxt/v/3.11.2) and [@nuxt/ui@2.15.2](https://www.npmjs.com/package/@nuxt/ui/v/2.15.2)
+- all tests use the default Nuxt UI template which contains these components
+  - `UContainer`
+  - `UCard`
+  - `USelect`
+  - `UButton`
+- this is very minimal so real apps will likely see larger bundle sizes
 - \* disabling dark mode is not recommended as it can break Nuxt UI
 - \*\* "manual tree shaking" doesn't actually install Nuxt UI and is not a viable strategy for real projects
 - \*\*\* [purgecss](https://github.com/FullHuman/purgecss) seems very effective but can lead to hard to find problems

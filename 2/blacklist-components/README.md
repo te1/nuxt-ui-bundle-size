@@ -1,4 +1,4 @@
-# Nuxt UI Minimal Starter - Blacklist Hnused Components
+# Nuxt UI Minimal Starter - Blacklist Unused Components
 
 ## Info
 

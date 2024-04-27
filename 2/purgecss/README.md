@@ -6,6 +6,15 @@
 - disabled [`features.inlineStyles`](https://nuxt.com/docs/guide/going-further/features#inlinestyles) and [`vite.build.cssCodeSplit`](https://vitejs.dev/config/build-options#build-csscodesplit) to have all CSS in one file
 - installed [nuxt-purgecss](https://github.com/Developmint/nuxt-purgecss)
 - if you get an error about `consola` named import then [pin version 3](https://github.com/nuxt/nuxt/issues/20209#issuecomment-1517575112)
+- [purgecss](https://github.com/FullHuman/purgecss) seems very effective but can lead to hard to find problems
+  - if you have it disabled during local dev (the default) you might not even see problems until you deploy
+  - if you enable it during local dev it can slow down your HMR
+  - you might need to manually add classes to the `safelist` to avoid breaking things
+  - case in point: hover styles are broken in this demo
+  - I tried to reuse the [smart safelisting](https://ui.nuxt.com/getting-started/theming#smart-safelisting) logic from Nuxt UI
+  - purgecss supports safelisting by regex `pattern` but you still would need to manually consider the tailwind `variants`
+  - https://tailwindcss.com/docs/content-configuration#safelisting-classes
+  - https://purgecss.com/safelisting.html#patterns
 - see [nuxt.config.ts](nuxt.config.ts)
 
 ```ts

@@ -25,7 +25,11 @@ As reported by `pnpm generate`:
   - if you have it disabled during local dev (the default) you might not even see problems until you deploy
   - if you enable it during local dev it can slow down your HMR
   - you might need to manually add classes to the `safelist` to avoid breaking things
-  - and/or try and reuse the [smart safelisting](https://ui.nuxt.com/getting-started/theming#smart-safelisting) logic from Nuxt UI
+  - case in point: hover styles are broken in this demo
+  - I tried to reuse the [smart safelisting](https://ui.nuxt.com/getting-started/theming#smart-safelisting) logic from Nuxt UI
+  - purgecss supports safelisting by regex `pattern` but you still would need to manually consider the tailwind `variants`
+  - https://tailwindcss.com/docs/content-configuration#safelisting-classes
+  - https://purgecss.com/safelisting.html#patterns
 
 ## Related Issues
 

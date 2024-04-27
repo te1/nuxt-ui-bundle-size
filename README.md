@@ -6,14 +6,15 @@ Compare CSS bundle sizes for [Nuxt UI](https://ui.nuxt.com) with different strat
 
 As reported by `pnpm generate`:
 
-| name                                                   |      size |              saved |     gzip |             saved |
-| :----------------------------------------------------- | --------: | -----------------: | -------: | ----------------: |
-| [default starter template](2/starter)                  | 271.97 kB |                    | 35.89 kB |                   |
-| [blacklist unused components](2/blacklist-components/) | 223.55 kB |  48.42 kB / 17.8 % | 29.20 kB |  6.69 kB / 18.6 % |
-| [disable dark mode](2/no-darkmode/)\*                  | 183.34 kB |  88.63 kB / 32.6 % | 27.15 kB |  8.74 kB / 24.4 % |
-| [whitelist used colors](2/whitelist-colors/)           | 176.02 kB |  95.95 kB / 35.3 % | 22.45 kB | 13.44 kB / 37.4 % |
-| ["manual tree shaking"](0/starter/)\*\*                | 111.99 kB | 159.98 kB / 58.8 % | 13.25 kB | 22.64 kB / 63.1 % |
-| [purgecss](2/purgecss/)\*\*\*                          |  61.37 kB | 210.60 kB / 77.4 % |  9.76 kB | 26.13 kB / 72.8 % |
+| name                                                                |      size |              saved |     gzip |             saved |
+| :------------------------------------------------------------------ | --------: | -----------------: | -------: | ----------------: |
+| [default starter template](2/starter)                               | 271.97 kB |                    | 35.89 kB |                   |
+| [blacklist unused components](2/blacklist-components/)              | 223.55 kB |  48.42 kB / 17.8 % | 29.20 kB |  6.69 kB / 18.6 % |
+| [disable dark mode](2/no-darkmode/)\*                               | 183.34 kB |  88.63 kB / 32.6 % | 27.15 kB |  8.74 kB / 24.4 % |
+| [whitelist used colors](2/whitelist-colors/)                        | 176.02 kB |  95.95 kB / 35.3 % | 22.45 kB | 13.44 kB / 37.4 % |
+| [whitelist and blacklist](2/whitelist-colors-blacklist-components/) | 127.60 kB | 144.37 kB / 53.1 % | 15.60 kB | 20.29 kB / 56.3 % |
+| ["manual tree shaking"](0/starter/)\*\*                             | 111.99 kB | 159.98 kB / 58.8 % | 13.25 kB | 22.64 kB / 63.1 % |
+| [purgecss](2/purgecss/)\*\*\*                                       |  61.37 kB | 210.60 kB / 77.4 % |  9.76 kB | 26.13 kB / 72.8 % |
 
 ### Notes
 

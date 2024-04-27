@@ -14,10 +14,10 @@
 
 As reported by `pnpm generate`:
 
-| name                                  |      size |              saved |     gzip |             saved |
-| :------------------------------------ | --------: | -----------------: | -------: | ----------------: |
-| [default starter template](2/starter) | 271.97 kB |                    | 35.89 kB |                   |
-| Nuxt UI v3 + Tailwind v4 alpha        |  96.01 kB | 175.96 kB / 64.7 % | 15.39 kB | 20.50 kB / 57.1 % |
+| name                                        |      size |              saved |     gzip |             saved |
+| :------------------------------------------ | --------: | -----------------: | -------: | ----------------: |
+| [default starter template](../../2/starter) | 271.97 kB |                    | 35.89 kB |                   |
+| Nuxt UI v3 + Tailwind v4 alpha              |  96.01 kB | 175.96 kB / 64.7 % | 15.39 kB | 20.50 kB / 57.1 % |
 
 ## Setup
 

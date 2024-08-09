@@ -2,7 +2,31 @@
 
 Compare CSS bundle sizes for [Nuxt UI](https://ui.nuxt.com) with different strategies to minimize size.
 
-## Results
+## Updated Results with @nuxt/ui@2.18.4
+
+CSS bundle size as reported by `pnpm generate`:
+
+| name                        |     size |           saved |     gzip |           saved |
+| :-------------------------- | -------: | --------------: | -------: | --------------: |
+| default starter template    | 84.52 kB |                 | 12.67 kB |                 |
+| blacklist unused components | 84.52 kB | 0.00 kB / 0.0 % | 12.67 kB | 0.00 kB / 0.0 % |
+| whitelist used colors       | 76.44 kB | 8.08 kB / 9.6 % | 11.60 kB | 1.07 kB / 8.4 % |
+| whitelist and blacklist     | 76.44 kB | 8.08 kB / 9.6 % | 11.60 kB | 1.07 kB / 8.4 % |
+
+## Conclusion
+
+- [Nuxt UI v2.18.4](https://github.com/nuxt/ui/releases/tag/v2.18.4) includes a very effective fix to reduce CSS bundle size
+- see the [PR](https://github.com/nuxt/ui/pull/2005) by [yuzh2001](https://github.com/yuzh2001) for details
+- on the default starter template this yields 69% savings (uncompressed) and 65% when using gzip
+- manually blacklisting unused components is no longer necessary/helpful
+- manually whitelisting used colors yields 9% savings (gzip) now (was 37% before the fix)
+
+| name                    |      size |              saved |     gzip |             saved |
+| :---------------------- | --------: | -----------------: | -------: | ----------------: |
+| @nuxt/ui@2.15.2 starter | 271.97 kB |                    | 35.89 kB |                   |
+| @nuxt/ui@2.18.4 starter |  84.52 kB | 187.45 kB / 68.9 % | 12.67 kB | 23.22 kB / 64.7 % |
+
+## Original Results With @nuxt/ui@2.15.2
 
 CSS bundle size as reported by `pnpm generate`:
 

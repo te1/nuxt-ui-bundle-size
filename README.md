@@ -19,7 +19,7 @@ CSS bundle size as reported by `pnpm generate`:
 - see the [PR](https://github.com/nuxt/ui/pull/2005) by [yuzh2001](https://github.com/yuzh2001) for details
 - on the default starter template this yields 69% savings (uncompressed) and 65% when using gzip
 - manually blacklisting unused components is no longer necessary/helpful
-- manually whitelisting used colors yields 9% savings (gzip) now (was 37% before the fix)
+- manually whitelisting used colors yields 8% savings (gzip) now (was 37% before the fix)
 
 | name                    |      size |              saved |     gzip |             saved |
 | :---------------------- | --------: | -----------------: | -------: | ----------------: |

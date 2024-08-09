@@ -13,7 +13,7 @@ CSS bundle size as reported by `pnpm generate`:
 | whitelist used colors       | 76.44 kB | 8.08 kB / 9.6 % | 11.60 kB | 1.07 kB / 8.4 % |
 | whitelist and blacklist     | 76.44 kB | 8.08 kB / 9.6 % | 11.60 kB | 1.07 kB / 8.4 % |
 
-## Conclusion
+### Conclusion
 
 - [Nuxt UI v2.18.4](https://github.com/nuxt/ui/releases/tag/v2.18.4) includes a very effective fix to reduce CSS bundle size
 - see the [PR](https://github.com/nuxt/ui/pull/2005) by [yuzh2001](https://github.com/yuzh2001) for details
@@ -61,18 +61,18 @@ CSS bundle size as reported by `pnpm generate`:
   - https://tailwindcss.com/docs/content-configuration#safelisting-classes
   - https://purgecss.com/safelisting.html#patterns
 
-## Conclusion
+### Conclusion
 
 - combine a whitelist of used colors with a blacklist of unused components
 - this is relatively straightforward to do and has manageable risks
 - see [example project](2/whitelist-colors-blacklist-components/) for details
 
-## Related Issues
+### Related Issues
 
 - https://github.com/nuxt/ui/issues/877
 - https://github.com/nuxt/ui/issues/889
 
-## The Future
+### The Future
 
 - [Tailwind v4 Vite plugin](https://tailwindcss.com/blog/tailwindcss-v4-alpha#zero-configuration-content-detection) should make blacklisting unused components obsolete
 - [Nuxt UI v3](https://github.com/nuxt/ui/issues/1289) should improve safelisting of colors

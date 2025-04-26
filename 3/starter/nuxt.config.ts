@@ -2,11 +2,15 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxtjs/color-mode", "@nuxt/ui"],
+  modules: ["@nuxt/ui", "@nuxt/eslint"],
 
-  colorMode: {
-    classSuffix: "",
+  css: ["~/assets/css/main.css"],
+
+  future: {
+    compatibilityVersion: 4,
   },
+
+  compatibilityDate: "2024-11-27",
 
   features: {
     inlineStyles: false,
@@ -23,4 +27,4 @@ export default defineNuxtConfig({
       },
     },
   },
-})
+});
